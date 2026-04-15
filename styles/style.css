@@ -133,7 +133,7 @@
     0 -1px var(--bg-color);
 }
 
-@supports (-webkit-text-stroke: 1px #fff) {
+@supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
   .card__label {
     -webkit-text-stroke: 1px var(--bg-color);
     text-shadow: none;
@@ -242,7 +242,7 @@
   inline-size: 21px;
   block-size: 21px;
   flex-shrink: 0;
-  filter: invert(1);
+  color: var(--bg-color);
   mix-blend-mode: difference;
 }
 
@@ -281,6 +281,7 @@
   inline-size: 39px;
   block-size: 39px;
   flex-shrink: 0;
+  color: var(--main-color);
 }
 
 .dialog__text {

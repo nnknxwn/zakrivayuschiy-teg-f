@@ -10,7 +10,7 @@
   --main-color: #000;
   --bg-color: #fff;
 
-  --content-width: clamp(375px, 100%, 700px);
+  --content-width: min(100%, 700px);
 
   --bg-gradient:
     repeating-linear-gradient(
