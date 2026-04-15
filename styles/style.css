@@ -147,14 +147,12 @@
   font-family: var(--accent-font), monospace;
   font-size: 14px;
   line-height: 0.9;
-  text-transform: capitalize;
   cursor: pointer;
 }
 
 .save {
   display: flex;
   justify-content: center;
-  margin-block-start: 50px;
   margin-block-end: 100px;
 }
 
@@ -220,4 +218,21 @@
   inline-size: 100%;
   padding-block: 12.5px;
   text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+  .save__button {
+    flex-direction: column;
+    padding-block: 15px;
+    padding-inline: 20px;
+  }
+
+  .save__icon {
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .card__label {
+    inset-inline-end: 13px;
+  }
 }
