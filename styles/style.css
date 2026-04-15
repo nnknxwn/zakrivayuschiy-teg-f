@@ -13,10 +13,42 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  color: var(--main-color);
   font-family: var(--main-font);
   font-variation-settings: 'wght' var(--main-font-weight);
   background-color: var(--bg-color);
   background-image: var(--bg-gradient);
   background-size: cover;
   background-attachment: fixed;
+}
+
+.content-section {
+  inline-size: var(--content-width);
+  margin-inline: auto;
+}
+
+.header {
+  margin-block-start: 100px;
+  margin-block-end: 100px;
+  padding-block: clamp(120px, 2.95vw + 108.95px, 130px);
+  padding-inline: 1rem;
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  border: 2px solid var(--main-color);
+  background-color: var(--bg-color);
+  font-family: var(--accent-font), monospace;
+  text-transform: uppercase;
+}
+
+.header__logo {
+  font-weight: 400;
+  font-size: clamp(49px, 4.92vw + 30.54px, 65px);
+  line-height: 1;
+}
+
+.header__title {
+  font-weight: 400;
+  font-size: clamp(14px, 2.77vw + 3.62px, 23px);
+  line-height: 1;
 }
