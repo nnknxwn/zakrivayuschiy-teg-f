@@ -84,6 +84,38 @@
   object-position: center;
 }
 
+.card:nth-child(1) .card__image {
+  filter: saturate(160%);
+}
+
+.card:nth-child(2) .card__image {
+  filter: contrast(120%);
+}
+
+.card:nth-child(3) .card__image {
+  filter: sepia(60%);
+}
+
+.card:nth-child(4) .card__image {
+  filter: hue-rotate(30deg);
+}
+
+.card:nth-child(5) .card__image {
+  filter: blur(2px);
+}
+
+.card:nth-child(6) .card__image {
+  filter: invert(0.7);
+}
+
+.card:nth-child(7) .card__image {
+  filter: brightness(110%) saturate(180%) hue-rotate(-20deg);
+}
+
+.card:nth-child(8) .card__image {
+  filter: grayscale(80%);
+}
+
 .card__label {
   position: absolute;
   inset-block-start: 25px;
