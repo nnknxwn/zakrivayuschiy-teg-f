@@ -10,6 +10,10 @@
 
 */
 
+.like-icon {
+  overflow: visible;
+}
+
 .like-icon .heart {
   transform-origin: center;
 }

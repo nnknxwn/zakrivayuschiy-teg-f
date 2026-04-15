@@ -118,7 +118,7 @@
 
 .card__label {
   position: absolute;
-  inset-block-start: 25px;
+  inset-block-start: 23px;
   inset-inline-end: 25px;
   font-family: var(--accent-font), fantasy;
   font-size: 14px;
@@ -248,8 +248,9 @@
 }
 
 .dialog {
-  inline-size: clamp(341px, 90%, 357px);
-  padding: 30px;
+  inline-size: clamp(341px, 90%, 353px);
+  padding-block: 30px;
+  padding-inline: 30px;
   background-color: var(--bg-color);
   color: var(--main-color);
   border: 2px solid var(--main-color);
@@ -293,7 +294,6 @@
 
 .dialog__button {
   inline-size: 100%;
-  padding-block: 12.5px;
   text-transform: uppercase;
 }
 
@@ -311,5 +311,9 @@
 
   .card__label {
     inset-inline-end: 13px;
+  }
+
+  .dialog {
+    padding-inline: 40px;
   }
 }
