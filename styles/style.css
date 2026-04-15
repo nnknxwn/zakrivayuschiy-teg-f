@@ -163,6 +163,15 @@
   background-color: transparent;
   border: 2px solid transparent;
   cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--main-color);
 }
 
 .like-icon {
@@ -170,6 +179,7 @@
 }
 
 .button {
+  position: relative;
   min-inline-size: 130px;
   padding-block: 9px;
   padding-inline: 17px;
@@ -180,6 +190,36 @@
   font-size: 14px;
   line-height: 0.9;
   cursor: pointer;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background-color: var(--main-color);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button:hover::before {
+  transform: scaleX(1);
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--main-color);
+}
+
+.button__text {
+  position: relative;
+  color: var(--bg-color);
+  mix-blend-mode: difference;
 }
 
 .save {
@@ -198,9 +238,12 @@
 }
 
 .save__icon {
+  position: relative;
   inline-size: 21px;
   block-size: 21px;
   flex-shrink: 0;
+  filter: invert(1);
+  mix-blend-mode: difference;
 }
 
 .dialog {
