@@ -540,7 +540,28 @@
           </div>
         </div>
       </article>
+      <div class="save">
+        <button class="save__button button" type="button">
+          <img class="save__icon" src="./svg/floppy.svg" alt="" aria-hidden="true" width="21" height="21" />
+          <span class="button__text">Сохранить на память</span>
+        </button>
+      </div>
     </main>
+    <dialog class="dialog" id="save-dialog">
+      <form class="dialog__form" method="dialog">
+        <div class="dialog__content">
+          <img class="dialog__icon" src="./svg/floppy.svg" alt="" aria-hidden="true" width="39" height="39" />
+          <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        </div>
+        <button class="dialog__button button" type="submit">
+          <span class="button__text">OK</span>
+        </button>
+      </form>
+    </dialog>
     <script src="./scripts/like.js"></script>
+    <script>
+      const saveDialog = document.getElementById('save-dialog');
+      document.querySelector('.save__button').addEventListener('click', () => saveDialog.showModal());
+    </script>
   </body>
 </html>
